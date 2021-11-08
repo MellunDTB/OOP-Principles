@@ -16,9 +16,33 @@ public class Penguin : Bird
         return false;
     }
 
-    public override void MakeSound()
+    public override string MakeSound()
     {
-        Debug.Log("Abstraction, Polymorphism, MakeSound()");
-        Debug.Log("Penguin Noise");
+        if (isLiving)
+        {
+            Debug.Log("Abstraction, Polymorphism, MakeSound()");
+            Debug.Log("Penguin Noise");
+
+            return "Penquin Noise";
+        }
+        else
+        {
+            return BirdIsDead();
+        }
+    }
+
+    public override string ReleaseBird()
+    {
+        string message = "";
+
+        if(isLiving)
+        {
+            message = message + animalName + " Begins to waddle away, " + MakeSound();
+        } else
+        {
+            message = message + BirdIsDead();
+        }
+
+        return message;
     }
 }

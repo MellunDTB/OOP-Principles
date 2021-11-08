@@ -279,25 +279,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240023818}
   m_CullTransparentMesh: 1
---- !u!1 &463292400 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1761518883436329587, guid: 7e254eafbf208b14e8e0b4cf30bd4148, type: 3}
+--- !u!114 &463292401 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 463292401, guid: 7e254eafbf208b14e8e0b4cf30bd4148, type: 3}
   m_PrefabInstance: {fileID: 3206439386165265630}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &463292401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463292400}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d242e87bb0940a84487dad46adc26766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birdsNameInput: {fileID: 1622956948}
-  birdTypeDropDown: {fileID: 916074355}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,10 +2181,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1761518883436329587, guid: 7e254eafbf208b14e8e0b4cf30bd4148, type: 3}
-      propertyPath: m_Icon
+    - target: {fileID: 463292401, guid: 7e254eafbf208b14e8e0b4cf30bd4148, type: 3}
+      propertyPath: birdsNameInput
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1622956948}
+    - target: {fileID: 463292401, guid: 7e254eafbf208b14e8e0b4cf30bd4148, type: 3}
+      propertyPath: birdTypeDropDown
+      value: 
+      objectReference: {fileID: 916074355}
     - target: {fileID: 1761518883436329587, guid: 7e254eafbf208b14e8e0b4cf30bd4148, type: 3}
       propertyPath: m_Name
       value: Game Manager

@@ -11,13 +11,47 @@ public class Duck : Bird
 
     public override bool CanFly()
     {
-        Debug.Log("Abstraction, Polymorphism, CanFly()");
-        return true;
+        if (isLiving)
+        {
+            Debug.Log("Abstraction, Polymorphism, CanFly()");
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
-    public override void MakeSound()
+    public override string MakeSound()
     {
-        Debug.Log("Abstraction, Polymorphism, MakeSound()");
-        Debug.Log("QUACK!");
+        if (isLiving)
+        {
+            Debug.Log("Abstraction, Polymorphism, MakeSound()");
+            Debug.Log("QUACK!");
+
+            return "Quack!";            
+        }
+        else
+        {
+            return BirdIsDead();
+        }
     }
+
+    public override string ReleaseBird()
+    {
+        string message = "";
+
+        if (isLiving)
+        {
+            message = message + animalName + " Begins to fly away, " + MakeSound();
+        }
+        else
+        {
+            message = message + BirdIsDead();
+        }
+
+        return message;
+    }
+
+
 }

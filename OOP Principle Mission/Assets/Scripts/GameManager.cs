@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -48,5 +50,19 @@ public class GameManager : MonoBehaviour
             Debug.Log("Penguin Created");
             bird = new Penguin(birdsName);
         }
+
+        SceneManager.LoadScene("MainOOP");
+    }
+
+    public override string ToString()
+    {
+        return 
+            bird.GetName() +
+            Environment.NewLine +
+            bird.CanFly() +
+            Environment.NewLine +
+            bird.MakeSound() +
+            Environment.NewLine +
+            bird.ReleaseBird();
     }
 }

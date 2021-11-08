@@ -9,21 +9,22 @@ public abstract class Bird : Animal
         isLiving = true;
     }
 
-    public abstract void MakeSound();
+    public abstract string MakeSound();
     public abstract bool CanFly();
+    public abstract string ReleaseBird();
 
     public string GetName()
     {
         return animalName;
     }
 
-    public bool IsAlive()
-    {
-        return isLiving;
-    }
-
     public void Kill()
     {
         isLiving = false;
+    }
+
+    protected string BirdIsDead()
+    {
+        return animalName + " is dead";
     }
 }
