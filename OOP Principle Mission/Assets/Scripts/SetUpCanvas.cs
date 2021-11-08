@@ -16,12 +16,6 @@ public class SetUpCanvas : MonoBehaviour
         birdNameDisplay.text = GameManager.instance.bird.GetName();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void MakeBirdSound()
     {
         actions.text += Environment.NewLine + GameManager.instance.bird.MakeSound();
@@ -29,13 +23,17 @@ public class SetUpCanvas : MonoBehaviour
 
     public void MakeBirdFly()
     {
-        if(GameManager.instance.bird.CanFly())
+        if(GameManager.instance.bird.CanFly() && GameManager.instance.bird.isLiving)
         {
             actions.text += Environment.NewLine + "Flying";
         }
-        else
+        else if(!GameManager.instance.bird.CanFly() && GameManager.instance.bird.isLiving)
         {
             actions.text += Environment.NewLine + "I Can't Fly!";
+        }
+        else
+        {
+            actions.text += Environment.NewLine + GameManager.instance.bird.BirdIsDead();
         }
         
     }

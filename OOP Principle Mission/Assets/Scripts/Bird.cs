@@ -22,9 +22,24 @@ public abstract class Bird : Animal
     {
         isLiving = false;
     }
-
-    protected string BirdIsDead()
+    public string BirdStatus()
     {
-        return animalName + " is dead";
+        if(isLiving)
+        {
+            return BirdIsAlive();
+        } else
+        {
+            return BirdIsDead();
+        }
+    }
+
+    public string BirdIsDead()
+    {
+        return animalName + " is dead :(";
+    }
+
+    public string BirdIsAlive()
+    {
+        return animalName + " is alive :)";
     }
 }

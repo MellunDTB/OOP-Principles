@@ -53,12 +53,12 @@
     <UnityVersion>2020.3.16f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\SetUpCanvas.cs" />
     <Compile Include="Assets\Scripts\Bird.cs" />
     <Compile Include="Assets\Scripts\Penguin.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Duck.cs" />
     <Compile Include="Assets\Scripts\Animal.cs" />
-    <Compile Include="Assets\Scripts\SetUpCanvas.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -5,5 +5,5 @@ using UnityEngine;
 public class Animal
 {
     protected string animalName { get; set; }
-    protected bool isLiving { get; set; }
+    public bool isLiving { get; set; }
 }
