@@ -46,10 +46,4 @@ public class SetUpCanvas : MonoBehaviour
     {
         GameManager.instance.bird.Kill();
     }
-
-    public void GoBack()
-    {
-        Destroy(GameManager.instance.gameObject);
-        SceneManager.LoadScene(0);
-    }
 }
